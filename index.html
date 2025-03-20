@@ -450,64 +450,64 @@ p {
   gtag('js', new Date());
 
   gtag('config', 'G-8SQ2H9J48M');
-  function showRandomPictures() {
-  const container = document.getElementById("random-pictures-container");
-  const numPictures = 10; // Number of random pictures to display
-  const imagePaths = [
-    "person.jpg",
-    "random1.jpg",
-    "random2.jpg",
-    "random3.jpg",
-    "random4.jpg",
-    "random5.jpg",
-    "random6.jpg",
-    "random7.jpg",
-    "random8.jpg",
-    "random9.jpg",
-  ]; // Add paths to your images
-  const minDistance = 300; // Minimum distance between photos (in pixels)
-  const photos = []; // Array to store the positions of existing photos
+//   function showRandomPictures() {
+//   const container = document.getElementById("random-pictures-container");
+//   const numPictures = 10; // Number of random pictures to display
+//   const imagePaths = [
+//     "person.jpg",
+//     "random1.jpg",
+//     "random2.jpg",
+//     "random3.jpg",
+//     "random4.jpg",
+//     "random5.jpg",
+//     "random6.jpg",
+//     "random7.jpg",
+//     "random8.jpg",
+//     "random9.jpg",
+//   ]; // Add paths to your images
+//   const minDistance = 300; // Minimum distance between photos (in pixels)
+//   const photos = []; // Array to store the positions of existing photos
 
-  for (let i = 0; i < numPictures; i++) {
-    const img = document.createElement("img");
-    img.src = imagePaths[Math.floor(Math.random() * imagePaths.length)];
-    img.classList.add("random-picture");
+//   for (let i = 0; i < numPictures; i++) {
+//     const img = document.createElement("img");
+//     img.src = imagePaths[Math.floor(Math.random() * imagePaths.length)];
+//     img.classList.add("random-picture");
 
-    let x, y;
-    let isValidPosition = false;
+//     let x, y;
+//     let isValidPosition = false;
 
-    // Generate a position that is not too close to existing photos
-    while (!isValidPosition) {
-      x = Math.random() * (window.innerWidth - 300); // Adjust for image width
-      y = Math.random() * (window.innerHeight - 300); // Adjust for image height
+//     // Generate a position that is not too close to existing photos
+//     while (!isValidPosition) {
+//       x = Math.random() * (window.innerWidth - 300); // Adjust for image width
+//       y = Math.random() * (window.innerHeight - 300); // Adjust for image height
 
-      // Check the distance to all existing photos
-      isValidPosition = true;
-      for (const photo of photos) {
-        const distance = Math.sqrt((x - photo.x) ** 2 + (y - photo.y) ** 2);
-        if (distance < minDistance) {
-          isValidPosition = false;
-          break;
-        }
-      }
-    }
+//       // Check the distance to all existing photos
+//       isValidPosition = true;
+//       for (const photo of photos) {
+//         const distance = Math.sqrt((x - photo.x) ** 2 + (y - photo.y) ** 2);
+//         if (distance < minDistance) {
+//           isValidPosition = false;
+//           break;
+//         }
+//       }
+//     }
 
-    // Save the position of the new photo
-    photos.push({ x, y });
+//     // Save the position of the new photo
+//     photos.push({ x, y });
 
-    // Set the position and rotation of the photo
-    img.style.left = `${x}px`;
-    img.style.top = `${y}px`;
+//     // Set the position and rotation of the photo
+//     img.style.left = `${x}px`;
+//     img.style.top = `${y}px`;
 
-    // Random rotation
-    const rotation = Math.random() * 360; // Random angle between 0 and 360 degrees
-    img.style.transform = `rotate(${rotation}deg)`;
+//     // Random rotation
+//     const rotation = Math.random() * 360; // Random angle between 0 and 360 degrees
+//     img.style.transform = `rotate(${rotation}deg)`;
 
-    container.appendChild(img);
-  }
-}
+//     container.appendChild(img);
+//   }
+// }
 
-// Call the function when the cake or profile picture is shown
-document.getElementById("cake_fadein").addEventListener("click", showRandomPictures);
+// // Call the function when the cake or profile picture is shown
+// document.getElementById("cake_fadein").addEventListener("click", showRandomPictures);
 </script>
 </html>
